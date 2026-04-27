@@ -1,0 +1,423 @@
+ PageSpace {
+  margin: 30px;
+
+}
+
+/* ===== NAVBAR BRAND ===== */
+.navbar-brand {
+  margin-left: 15px;
+  font-size: clamp(1.8rem, 3vw, 5rem);
+  line-height: 1;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+  font-size: clamp(1rem, 1.5vw, 2.3rem);
+  font-weight: 500;
+}
+
+WELCOME
+
+.welcome-section h1 {
+  font-size: 4rem;
+  
+}
+
+.welcome-section h1 {
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  text-align: center;
+  margin-bottom: 20px; /* creates separation */
+  padding-top: 200px;
+  padding-bottom: 100px;
+  color: black;
+}
+
+
+.welcome-section p {
+  font-size: clamp(3.1rem, 2vw, 1.6rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+ABOUT ME
+
+/* SECTION */
+.about-me {
+  background-color: #b68378;
+  padding: clamp(50px, 6vw, 100px) 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.about-title {
+  font-size: clamp(4.5rem, 4vw, 3.5rem);
+  margin-bottom: clamp(20px, 4vw, 40px);
+  text-align: center;
+  padding-top: 250px;
+  color: black;
+  
+}
+
+/* CARD */
+.about-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 50px);
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 40px);
+  padding-bottom: 100px;
+
+  flex-wrap: wrap; /* allows stacking naturally */
+}
+
+/* IMAGE WRAPPER */
+.about-image {
+  flex: 1 1 300px; /* 🔥 flexible grow + shrink + base size */
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  max-width: 600px; /* allows large desktop image */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  padding-bottom: 300px;
+}
+
+/* TEXT */
+.about-text {
+  flex: 1 1 300px; /* 🔥 same flexible behavior */
+  text-align: left;
+}
+
+/* RESPONSIVE TEXT */
+.about-text p {
+  font-size: clamp(2.5rem, 1.5vw, 1.8rem);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* BUTTON */
+.custom-btn {
+  display: inline-block;
+  padding: clamp(10px, 1.2vw, 14px) clamp(18px, 2vw, 24px);
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+
+  /* 🔥 responsive text */
+  font-size: clamp(1.5rem, 1.5vw, 1.3rem);
+
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 90%; /* fills more space on mobile */
+  }
+}
+
+BUTTON/BACKGROUND
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+body {
+  background-color: #B68378;
+}
+
+.card {
+  background-color: #B68378;
+}
+
+
+HERO SECTION/IMAGES
+
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  
+}
+
+.hero-images img {
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+
+  width: 100%;
+  height: auto;        /* keeps real image proportions */
+
+  border-radius: 10px;
+  display: block;
+}
+
+/* Mobile: stack images */
+@media (max-width: 576px) {
+  .hero-images img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+PROJECT CARDS
+
+/* TITLE */
+.projects {
+  padding: 100px 40px 140px;
+}
+
+/* TITLE */
+.projects h1 {
+  font-size: clamp(3rem, 6vw, 5rem); /* 🔥 bigger + responsive */
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+/* ===== LARGER HERO GRID ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+
+  /* adds space on left + right sides */
+  padding: 0 5vw;
+
+  /* keeps it centered but not full-bleed */
+  box-sizing: border-box;
+}
+
+/* ===== HERO CARD ===== */
+.card {
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   margin-bottom: 50px; /* creates separation */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+}
+
+/* ===== BIG IMAGE (FIXED) ===== */
+.card img {
+  width: 100%;
+  height: auto;        /* key change: allows scaling */
+  display: block;
+}
+
+/* ===== CONTENT ===== */
+.card-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* TITLE */
+.card-content h3 {
+  font-size: 2.6rem;
+  
+  
+}
+
+/* TEXT */
+.card-content p {
+  font-size: 2rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  color: black;
+}
+
+/* ===== BUTTON ===== */
+.custom-btn {
+  display: inline-block;
+  padding: clamp(10px, 1.2vw, 14px) clamp(16px, 2vw, 22px);
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+
+  /* 🔥 responsive text */
+  font-size: clamp(1.5rem, 1.5vw, 1.3rem);
+
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.custom-btn:hover {
+  background: black;
+  color: white;
+}
+
+
+
+
+PROJECT PAGES
+
+/* PAGE STYLE */
+.project-detail {
+  padding: 20px;
+  background: #1e1f26;
+  color: white;
+  font-family: sans-serif;
+}
+
+.project-text h1,
+.project-text p {
+  color: white;
+}
+
+/* TOP IMAGE */
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* GRID LAYOUT */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* IMAGE COLUMN */
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* IMAGE CARD */
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-card p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+/* PLACEHOLDER (gray boxes like your mockup) */
+.placeholder {
+  background: #ccc;
+  height: 200px;
+}
+
+/* TEXT SIDE */
+.project-text {
+  padding-left: 20px;
+}
+
+.project-text h1 {
+  letter-spacing: 5px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.project-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.back-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn a {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.project-detail {
+  min-height: 100vh; /* 🔥 fills full screen height */
+  background: linear-gradient(to right, #1e1f26, #2a2c36); /* optional nicer bg */
+}
+
+.image-card img {
+  width: 100%;
+  height: auto; /* 👈 KEY: keeps full image */
+  display: block;
+  border-radius: 8px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;   /* 👈 keeps full image */
+  display: block;
+  border-radius: 8px;
+}
+.projects h1 {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.image-card p {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.1rem;
+  font-weight: 400; /* or 700 (Alfa Slab One ignores this mostly) */
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
